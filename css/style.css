@@ -1,0 +1,452 @@
+/* ===================================
+   SM art Power Yoga - Main Stylesheet
+   =================================== */
+
+/* CSS Variables */
+:root {
+    --purple-primary: #7c3aed;
+    --purple-dark: #6d28d9;
+    --purple-light: #a78bfa;
+    --purple-lighter: #ddd6fe;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --bg-light: #f9fafb;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    /* color: var(--text-dark); */
+    color: #dba915;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Utility Classes */
+.text-purple {
+    color: var(--purple-primary) !important;
+}
+
+.bg-purple {
+    background-color: var(--purple-primary) !important;
+}
+
+.btn-purple {
+    background-color: var(--purple-primary);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+    color: white;
+}
+
+.btn-outline-purple {
+    background-color: transparent;
+    color: var(--purple-primary);
+    border: 2px solid var(--purple-primary);
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-purple:hover {
+    background-color: var(--purple-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+}
+
+/* Navigation */
+.navbar {
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+}
+
+.navbar.scrolled {
+    background-color: white !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--purple-primary) !important;
+}
+
+.nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--purple-primary) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--purple-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 100px;
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+}
+
+.hero-image-container {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+    top: 35px;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Service Cards */
+.service-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--purple-light);
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2) !important;
+}
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--purple-lighter) 0%, var(--purple-light) 100%);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Location Cards */
+.location-card {
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--purple-light);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15) !important;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    border-left: 4px solid var(--purple-primary);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Shadow Utilities */
+.shadow-hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+}
+
+.shadow-hover:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Gallery */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(124, 58, 237, 0.9) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Contact Form */
+.form-control:focus {
+    border-color: var(--purple-primary);
+    box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Social Links */
+.social-links a {
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+    opacity: 0.8;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+}
+
+footer a:hover {
+    color: var(--purple-light) !important;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-dark) 100%);
+    padding: 120px 0 60px;
+    margin-bottom: 50px;
+}
+
+/* Schedule Table */
+.schedule-table {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.schedule-table th {
+    background-color: var(--purple-primary);
+    color: white;
+    font-weight: 600;
+}
+
+.schedule-table td {
+    vertical-align: middle;
+}
+
+/* FAQ Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: var(--purple-lighter);
+    color: var(--purple-dark);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(124, 58, 237, 0.25);
+}
+
+/* Pricing Cards */
+.pricing-card {
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.pricing-card.featured {
+    border-color: var(--purple-primary);
+    transform: scale(1.05);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+}
+
+.pricing-badge {
+    background-color: var(--purple-primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Benefits Section */
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--purple-lighter) 0%, var(--purple-light) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--purple-primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#backToTop:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-5px);
+}
+
+/* Loading Spinner */
+.spinner {
+    border: 3px solid var(--purple-lighter);
+    border-top: 3px solid var(--purple-primary);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--purple-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--purple-dark);
+}
+
+/* Modal Customization */
+.modal-header {
+    background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-dark) 100%);
+    color: white;
+}
+
+.modal-content {
+    border-radius: 16px;
+    border: none;
+}
+
+/* Image Hover Effect */
+.img-hover-zoom {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.img-hover-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Section Divider */
+.section-divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--purple-primary) 0%, var(--purple-light) 100%);
+    margin: 20px auto;
+    border-radius: 2px;
+}

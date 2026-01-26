@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SM art Power Yoga Gallery - View photos from our yoga classes, outdoor activities, trekking events, and community gatherings across Airoli centers.">
+    <meta name="keywords" content="yoga class photos, power yoga gallery, meditation images, yoga events, outdoor yoga activities, yoga community Airoli">
+    <title>Gallery - SM art Power Yoga | Photos & Events</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-purple" href="../index.html">
+                <i class="fas fa-om me-2"></i>SM art Power Yoga
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center text-white">
+            <h1 class="display-4 fw-bold mb-3 fade-in-up">Our Gallery</h1>
+            <p class="lead fade-in-up" style="animation-delay: 0.2s">Moments from Our Yoga Journey</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-center flex-wrap gap-3 fade-in-up">
+                <button class="btn btn-purple filter-btn active" data-filter="all" onclick="filterGallery('all')">All</button>
+                <button class="btn btn-outline-purple filter-btn" data-filter="power-yoga" onclick="filterGallery('power-yoga')">Power Yoga</button>
+                <button class="btn btn-outline-purple filter-btn" data-filter="meditation" onclick="filterGallery('meditation')">Meditation</button>
+                <button class="btn btn-outline-purple filter-btn" data-filter="outdoor" onclick="filterGallery('outdoor')">Outdoor</button>
+                <button class="btn btn-outline-purple filter-btn" data-filter="events" onclick="filterGallery('events')">Events</button>
+                <button class="btn btn-outline-purple filter-btn" data-filter="trekking" onclick="filterGallery('trekking')">Trekking</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="galleryGrid">
+                <!-- Power Yoga Images -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="power-yoga">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-1.jpg', 'Power Yoga Class Session')">
+                        <img src="../assets/images/gallery-1.jpg" alt="Power Yoga Class" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Power Yoga Class</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="power-yoga" style="animation-delay: 0.1s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-2.jpg', 'Advanced Power Yoga')">
+                        <img src="../assets/images/gallery-2.jpg" alt="Advanced Power Yoga" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Advanced Power Yoga</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="power-yoga" style="animation-delay: 0.2s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-3.jpg', 'Group Power Yoga Session')">
+                        <img src="../assets/images/gallery-3.jpg" alt="Group Power Yoga" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Group Power Yoga</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meditation Images -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 0.3s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-4.jpg', 'Meditation Session')">
+                        <img src="../assets/images/gallery-4.jpg" alt="Meditation Session" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Meditation Session</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 0.4s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-5.jpg', 'Group Meditation')">
+                        <img src="../assets/images/gallery-5.jpg" alt="Group Meditation" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Group Meditation</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 0.5s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-6.jpg', 'Morning Meditation')">
+                        <img src="../assets/images/gallery-6.jpg" alt="Morning Meditation" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Morning Meditation</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Outdoor Activities -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 0.6s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-7.jpg', 'Beach Yoga Session')">
+                        <img src="../assets/images/gallery-7.jpg" alt="Beach Yoga" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Beach Yoga Session</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 0.7s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-8.jpg', 'Park Workout')">
+                        <img src="../assets/images/gallery-8.jpg" alt="Park Workout" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Park Workout</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 0.8s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-9.jpg', 'Sunrise Yoga')">
+                        <img src="../assets/images/gallery-9.jpg" alt="Sunrise Yoga" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Sunrise Yoga</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trekking -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 0.9s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-10.jpg', 'Mountain Trekking')">
+                        <img src="../assets/images/gallery-10.jpg" alt="Mountain Trekking" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Mountain Trekking</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 1s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-11.jpg', 'Group Trek')">
+                        <img src="../assets/images/gallery-11.jpg" alt="Group Trek" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Group Trek</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 1.1s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-12.jpg', 'Weekend Adventure')">
+                        <img src="../assets/images/gallery-12.jpg" alt="Weekend Adventure" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Weekend Adventure</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 1.2s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-13.jpg', 'Community Event')">
+                        <img src="../assets/images/gallery-13.jpg" alt="Community Event" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Community Event</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 1.3s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-14.jpg', 'Fun Games Day')">
+                        <img src="../assets/images/gallery-14.jpg" alt="Fun Games" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Fun Games Day</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 1.4s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-15.jpg', 'Picnic Gathering')">
+                        <img src="../assets/images/gallery-15.jpg" alt="Picnic Gathering" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Picnic Gathering</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="text-center py-5" style="display: none;">
+                <i class="fas fa-images fa-4x text-muted mb-3"></i>
+                <h4 class="text-muted">No images found in this category</h4>
+                <p class="text-muted">Try selecting a different filter</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-purple text-white">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-3 col-6 fade-in-up">
+                    <div class="counter display-4 fw-bold mb-2" data-count="1000">0</div>
+                    <p class="mb-0">Happy Students</p>
+                </div>
+                <div class="col-md-3 col-6 fade-in-up" style="animation-delay: 0.1s">
+                    <div class="counter display-4 fw-bold mb-2" data-count="5">0</div>
+                    <p class="mb-0">Locations</p>
+                </div>
+                <div class="col-md-3 col-6 fade-in-up" style="animation-delay: 0.2s">
+                    <div class="counter display-4 fw-bold mb-2" data-count="50">0</div>
+                    <p class="mb-0">Events Conducted</p>
+                </div>
+                <div class="col-md-3 col-6 fade-in-up" style="animation-delay: 0.3s">
+                    <div class="counter display-4 fw-bold mb-2" data-count="10">0</div>
+                    <p class="mb-0">Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section (Optional) -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5 fade-in-up">
+                <h2 class="display-5 fw-bold text-purple">Watch Our Videos</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted">See our classes and events in action</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 fade-in-up">
+                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Power Yoga Session" allowfullscreen></iframe>
+                    </div>
+                    <h5 class="mt-3">Power Yoga Session Highlights</h5>
+                </div>
+                <div class="col-md-6 fade-in-up" style="animation-delay: 0.2s">
+                    <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Meditation Session" allowfullscreen></iframe>
+                    </div>
+                    <h5 class="mt-3">Meditation & Mindfulness</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5 fade-in-up">
+                <h2 class="display-5 fw-bold text-purple">Follow Us on Instagram</h2>
+                <div class="section-divider"></div>
+                <p class="lead text-muted">Stay updated with our daily activities and events</p>
+                <a href="https://www.instagram.com/power_yoga_with_meditation?igsh=MWN3cmlqc3drdTI1dA==" target="_blank" class="btn btn-purple mt-3">
+                    <i class="fab fa-instagram me-2"></i>Follow @smartpoweryoga
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5">
+        <div class="container text-center fade-in-up">
+            <h2 class="display-5 fw-bold text-purple mb-4">Want to Be Part of Our Community?</h2>
+            <p class="lead text-muted mb-4">Join us and create your own yoga journey memories</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap">
+                <a href="contact.html" class="btn btn-purple btn-lg">Join Now</a>
+                <a href="services.html" class="btn btn-outline-purple btn-lg">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="mb-4"><i class="fas fa-om me-2"></i>SM art Power Yoga</h4>
+                    <p class="text-light">Transform your body and mind through the power of yoga and meditation with expert guidance from Suraj Mokal.</p>
+                    <div class="social-links mt-4">
+                        <a href="https://wa.me/919004293540" target="_blank" class="text-white me-3"><i class="fab fa-whatsapp fa-2x"></i></a>
+                        <a href="https://www.instagram.com/power_yoga_with_meditation?igsh=MWN3cmlqc3drdTI1dA==" target="_blank" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="https://www.facebook.com/share/1GC3rmP5UX/" target="_blank" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-light text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-phone-alt me-2"></i>9004293540</li>
+                        <li class="mb-3"><i class="fas fa-envelope me-2"></i>smrt.poweryoga@gmail.com</li>
+                        <li class="mb-3"><i class="fas fa-map-marker-alt me-2"></i>Multiple locations in Airoli</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 SM art Power Yoga. All rights reserved. | Designed with <i class="fas fa-heart text-danger"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+
+    <!-- Gallery Filter Script -->
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item-wrapper');
+            const noResults = document.getElementById('noResults');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('btn-purple', 'active');
+                btn.classList.add('btn-outline-purple');
+            });
+            
+            const activeBtn = document.querySelector(`[data-filter="${category}"]`);
+            activeBtn.classList.remove('btn-outline-purple');
+            activeBtn.classList.add('btn-purple', 'active');
+        }
+    </script>
+</body>
+</html>

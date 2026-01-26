@@ -1,0 +1,11 @@
+{
+  "name": "smart-power-yoga-website",
+  "version": "1.0.0",
+  "description": "Modern yoga website with live reload",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

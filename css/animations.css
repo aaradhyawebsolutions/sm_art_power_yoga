@@ -1,0 +1,423 @@
+/* ===================================
+   Scroll-Triggered Animations
+   =================================== */
+
+/* Base Animation States */
+.fade-in-up,
+.fade-in-left,
+.fade-in-right,
+.fade-in-down,
+.zoom-in,
+.rotate-in {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+/* Fade In Up */
+.fade-in-up {
+    transform: translateY(50px);
+}
+
+.fade-in-up.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade In Left */
+.fade-in-left {
+    transform: translateX(-50px);
+}
+
+.fade-in-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade In Right */
+.fade-in-right {
+    transform: translateX(50px);
+}
+
+.fade-in-right.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade In Down */
+.fade-in-down {
+    transform: translateY(-50px);
+}
+
+.fade-in-down.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Zoom In */
+.zoom-in {
+    transform: scale(0.8);
+}
+
+.zoom-in.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Rotate In */
+.rotate-in {
+    transform: rotate(-10deg) scale(0.8);
+}
+
+.rotate-in.animated {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+/* Stagger Animation Delays */
+.fade-in-up:nth-child(1) { transition-delay: 0s; }
+.fade-in-up:nth-child(2) { transition-delay: 0.1s; }
+.fade-in-up:nth-child(3) { transition-delay: 0.2s; }
+.fade-in-up:nth-child(4) { transition-delay: 0.3s; }
+.fade-in-up:nth-child(5) { transition-delay: 0.4s; }
+.fade-in-up:nth-child(6) { transition-delay: 0.5s; }
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounce 2s ease infinite;
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.shake:hover {
+    animation: shake 0.5s ease;
+}
+
+/* Slide In From Bottom */
+@keyframes slideInBottom {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-bottom {
+    animation: slideInBottom 0.8s ease-out;
+}
+
+/* Glow Effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(124, 58, 237, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(124, 58, 237, 0.8), 0 0 30px rgba(124, 58, 237, 0.6);
+    }
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-animate {
+    background-size: 200% 200%;
+    animation: gradientShift 5s ease infinite;
+}
+
+/* Float Animation (for images) */
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-15px) rotate(2deg);
+    }
+    75% {
+        transform: translateY(-5px) rotate(-2deg);
+    }
+}
+
+.float-image {
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.typing-effect {
+    overflow: hidden;
+    border-right: 3px solid var(--purple-primary);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
+}
+
+/* Reveal Animation */
+@keyframes reveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.reveal {
+    animation: reveal 1s ease-out;
+}
+
+/* Counter Animation */
+.counter {
+    transition: all 0.5s ease;
+}
+
+/* Image Gallery Hover */
+.gallery-hover-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.gallery-hover-effect:hover::before {
+    left: 100%;
+}
+
+/* Card Flip Effect */
+.flip-card {
+    perspective: 1000px;
+    height: 300px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, var(--purple-primary), var(--purple-dark));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Progress Bar Animation */
+@keyframes progressBar {
+    from {
+        width: 0;
+    }
+}
+
+.progress-bar-animated {
+    animation: progressBar 1.5s ease-out;
+}
+
+/* Blob Animation */
+@keyframes blob {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+}
+
+.blob-animate {
+    animation: blob 8s ease-in-out infinite;
+}
+
+/* Text Shimmer Effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.shimmer-text {
+    background: linear-gradient(90deg, 
+        var(--purple-dark) 0%, 
+        var(--purple-light) 50%, 
+        var(--purple-dark) 100%);
+    background-size: 1000px 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+
+/* Underline Hover Effect */
+.underline-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple-primary), var(--purple-light));
+    transition: width 0.3s ease;
+}
+
+.underline-hover:hover::after {
+    width: 100%;
+}
+
+/* Particle Background Animation */
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 1;
+    }
+}
+
+.particle {
+    position: absolute;
+    background: var(--purple-light);
+    border-radius: 50%;
+    animation: particleFloat 6s ease-in-out infinite;
+}
+
+/* Notification Slide In */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.notification-slide {
+    animation: slideInRight 0.5s ease-out;
+}
+
+/* Loading Dots */
+@keyframes loadingDots {
+    0%, 20% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.loading-dot {
+    animation: loadingDots 1.4s infinite;
+}
+
+.loading-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}

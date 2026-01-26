@@ -1,0 +1,460 @@
+/* ===================================
+   Mobile Responsive Styles
+   =================================== */
+
+/* Large Devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .display-3 {
+        font-size: 3rem;
+    }
+    
+    .display-5 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Medium Devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    /* Navigation */
+    .navbar-collapse {
+        background-color: white;
+        padding: 20px;
+        border-radius: 12px;
+        margin-top: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link {
+        padding: 10px 0;
+        margin: 5px 0;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding-top: 80px;
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-image-container {
+        margin-top: 30px;
+    }
+    
+    /* Services */
+    .service-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Locations */
+    .location-card {
+        margin-bottom: 20px;
+    }
+    
+    /* Display Sizes */
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    /* Gallery */
+    .gallery-item {
+        margin-bottom: 20px;
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+}
+
+/* Small Devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    /* Typography */
+    h1, .h1 {
+        font-size: 2rem;
+    }
+    
+    h2, .h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3, .h3 {
+        font-size: 1.5rem;
+    }
+    
+    .display-3 {
+        font-size: 2rem;
+    }
+    
+    .display-5 {
+        font-size: 1.75rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    /* Buttons */
+    .btn-lg {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding-top: 100px;
+        text-align: center;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+    
+    .hero-section .d-flex {
+        flex-direction: column;
+        gap: 15px !important;
+    }
+    
+    .hero-section .btn {
+        width: 100%;
+    }
+    
+    /* Sections Padding */
+    section {
+        padding: 40px 0 !important;
+    }
+    
+    .py-5 {
+        padding: 40px 0 !important;
+    }
+    
+    /* Service Cards */
+    .service-card {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    
+    .icon-box {
+        margin: 0 auto 20px;
+    }
+    
+    /* Location Cards */
+    .location-card {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
+    
+    /* About Section */
+    .about-section img {
+        margin-bottom: 30px;
+    }
+    
+    /* Gallery */
+    .gallery-item {
+        margin-bottom: 15px;
+    }
+    
+    .gallery-item img {
+        height: 220px;
+    }
+    
+    /* Footer */
+    footer .col-lg-4 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    footer .social-links {
+        justify-content: center;
+    }
+    
+    /* Page Header */
+    .page-header {
+        padding: 100px 0 40px;
+        text-align: center;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    /* Contact Form */
+    .contact-info {
+        margin-bottom: 30px;
+    }
+    
+    /* Schedule Table */
+    .schedule-table {
+        font-size: 0.875rem;
+    }
+    
+    .schedule-table th,
+    .schedule-table td {
+        padding: 10px 5px;
+    }
+    
+    /* Pricing Cards */
+    .pricing-card {
+        margin-bottom: 30px;
+    }
+    
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+    
+    /* Back to Top */
+    #backToTop {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Extra Small Devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    /* Container Padding */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Typography */
+    h1, .h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2, .h2 {
+        font-size: 1.5rem;
+    }
+    
+    .display-3 {
+        font-size: 1.75rem;
+    }
+    
+    .display-5 {
+        font-size: 1.5rem;
+    }
+    
+    /* Navigation */
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+        padding-top: 80px;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        font-size: 0.875rem;
+        padding: 10px 20px;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+    
+    /* Cards */
+    .service-card,
+    .location-card,
+    .testimonial-card {
+        padding: 20px !important;
+    }
+    
+    /* Icon Box */
+    .icon-box {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon-box i {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Gallery */
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 30px 0 !important;
+    }
+    
+    footer h4,
+    footer h5 {
+        font-size: 1.25rem;
+    }
+    
+    .social-links a i {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Form */
+    .form-control {
+        font-size: 0.875rem;
+    }
+    
+    /* CTA Section */
+    .bg-purple h2 {
+        font-size: 1.5rem;
+    }
+    
+    .bg-purple .lead {
+        font-size: 0.95rem;
+    }
+    
+    /* Schedule Table */
+    .table-responsive {
+        font-size: 0.75rem;
+    }
+    
+    /* Contact Info Icons */
+    .contact-info i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Landscape Orientation Fixes */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+    
+    .page-header {
+        padding: 80px 0 30px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    footer,
+    #backToTop,
+    .social-links {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+    }
+    
+    h1 {
+        font-size: 20pt;
+    }
+    
+    h2 {
+        font-size: 18pt;
+    }
+    
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+    
+    .page-break {
+        page-break-before: always;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ensure crisp text rendering */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark Mode Support (Future Enhancement) */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment when implementing dark mode */
+    /*
+    :root {
+        --bg-light: #1f2937;
+        --text-dark: #f9fafb;
+        --text-light: #d1d5db;
+    }
+    */
+}
+
+/* Container Max Widths Override for Better Mobile */
+@media (max-width: 991.98px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Fix Bootstrap Column Gaps on Mobile */
+@media (max-width: 767.98px) {
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .row > * {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .nav-link {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Remove hover effects on touch devices */
+    .service-card:hover,
+    .location-card:hover,
+    .testimonial-card:hover {
+        transform: none;
+    }
+}
