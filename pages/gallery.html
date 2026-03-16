@@ -26,9 +26,10 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold text-purple" href="../index.html">
+            <a class="navbar-brand fw-bold text-purple" href="../index.html" style="display: flex;">
                 <!-- <i class="fas fa-om me-2"></i>SM art Power Yoga -->
-                <i class="fas fa-spa"></i> SM art Power Yoga
+                <!-- <i class="fas fa-spa"></i> SM art Power Yoga -->
+                <img src="../assets/images/smArt-logo.jpg" alt="SM Art logo" style="width: 40px; height: 40px; border-radius: 5px; "> &nbsp; SM art Power Yoga
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -63,6 +64,7 @@
                 <button class="btn btn-outline-purple filter-btn" data-filter="outdoor" onclick="filterGallery('outdoor')">Outdoor</button>
                 <button class="btn btn-outline-purple filter-btn" data-filter="events" onclick="filterGallery('events')">Events</button>
                 <button class="btn btn-outline-purple filter-btn" data-filter="trekking" onclick="filterGallery('trekking')">Trekking</button>
+                <button class="btn btn-outline-purple filter-btn" data-filter="children-yoga" onclick="filterGallery('children-yoga')">Children Yoga</button>
             </div>
         </div>
     </section>
@@ -108,8 +110,68 @@
                     </div>
                 </div>
 
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="power-yoga" style="animation-delay: 0.3s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-17.jpg', 'Assisted Headstand Practice')">
+                        <img src="../assets/images/Gallery-17.jpg" alt="Assisted Headstand Practice" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Assisted Headstand Practice</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="power-yoga" style="animation-delay: 0.4s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-21.jpg', 'Women Yoga Unity')">
+                        <img src="../assets/images/Gallery-21.jpg" alt="Women Yoga Unity" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Women Yoga Unity</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="power-yoga" style="animation-delay: 0.5s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-23.jpg', 'Stability ball exercise')">
+                        <img src="../assets/images/Gallery-23.jpg" alt="Stability ball exercise" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Stability ball exercise</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="power-yoga" style="animation-delay: 0.6s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-25.jpg', 'Stability ball Yoga')">
+                        <img src="../assets/images/Gallery-25.jpg" alt="Stability ball Yoga" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Stability ball Yoga</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="power-yoga" style="animation-delay: 0.7s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-27.jpg', 'Stability ball Yoga 2')">
+                        <img src="../assets/images/Gallery-27.jpg" alt="Stability ball Yoga 2" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Stability ball Yoga 2</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Meditation Images -->
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 0.3s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 0.8s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-4.jpg', 'Meditation Session')">
                         <img src="../assets/images/gallery-4.jpg" alt="Meditation Session" class="img-fluid">
                         <div class="gallery-overlay">
@@ -121,7 +183,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 0.4s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 0.9s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-5.jpg', 'Group Meditation')">
                         <img src="../assets/images/gallery-5.jpg" alt="Group Meditation" class="img-fluid">
                         <div class="gallery-overlay">
@@ -133,7 +195,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 0.5s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 1.0s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-6.jpg', 'Morning Meditation')">
                         <img src="../assets/images/gallery-6.jpg" alt="Morning Meditation" class="img-fluid">
                         <div class="gallery-overlay">
@@ -145,8 +207,44 @@
                     </div>
                 </div>
 
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 1.1s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-24.jpg', 'Meditation Wheel sessions 1')">
+                        <img src="../assets/images/Gallery-24.jpg" alt="Meditation Wheel sessions 1" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Meditation Wheel sessions 1</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 1.2s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-26.jpg', 'Meditation Wheel sessions 2')">
+                        <img src="../assets/images/Gallery-26.jpg" alt="Meditation Wheel sessions 2" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Meditation Wheel sessions 2</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="meditation" style="animation-delay: 1.3s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-28.jpg', 'Meditation Wheel sessions 3')">
+                        <img src="../assets/images/Gallery-28.jpg" alt="Meditation Wheel sessions 3" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Meditation Wheel sessions 3</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Outdoor Activities -->
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 0.6s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 1.4s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-7.jpg', 'Beach Yoga Session')">
                         <img src="../assets/images/gallery-7.jpg" alt="Beach Yoga" class="img-fluid">
                         <div class="gallery-overlay">
@@ -158,7 +256,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 0.7s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 1.5s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-8.jpg', 'Park Workout')">
                         <img src="../assets/images/gallery-8.jpg" alt="Park Workout" class="img-fluid">
                         <div class="gallery-overlay">
@@ -170,7 +268,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 0.8s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="outdoor" style="animation-delay: 1.6s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-9.jpg', 'Sunrise Yoga')">
                         <img src="../assets/images/gallery-9.jpg" alt="Sunrise Yoga" class="img-fluid">
                         <div class="gallery-overlay">
@@ -183,7 +281,7 @@
                 </div>
 
                 <!-- Trekking -->
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 0.9s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 1.7s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-10.jpg', 'Mountain Trekking')">
                         <img src="../assets/images/gallery-10.jpg" alt="Mountain Trekking" class="img-fluid">
                         <div class="gallery-overlay">
@@ -195,7 +293,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 1s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 1.8s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-11.jpg', 'Group Trek')">
                         <img src="../assets/images/gallery-11.jpg" alt="Group Trek" class="img-fluid">
                         <div class="gallery-overlay">
@@ -207,7 +305,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 1.1s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="trekking" style="animation-delay: 1.9s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-12.jpg', 'Weekend Adventure')">
                         <img src="../assets/images/gallery-12.jpg" alt="Weekend Adventure" class="img-fluid">
                         <div class="gallery-overlay">
@@ -220,7 +318,7 @@
                 </div>
 
                 <!-- Events -->
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 1.2s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 2.0s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-13.jpg', 'Community Event')">
                         <img src="../assets/images/gallery-13.jpg" alt="Community Event" class="img-fluid">
                         <div class="gallery-overlay">
@@ -232,7 +330,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 1.3s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 2.1s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-14.jpg', 'Fun Games Day')">
                         <img src="../assets/images/gallery-14.jpg" alt="Fun Games" class="img-fluid">
                         <div class="gallery-overlay">
@@ -244,7 +342,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 1.4s">
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="events" style="animation-delay: 2.2s">
                     <div class="gallery-item" onclick="openGalleryModal('../assets/images/gallery-15.jpg', 'Picnic Gathering')">
                         <img src="../assets/images/gallery-15.jpg" alt="Picnic Gathering" class="img-fluid">
                         <div class="gallery-overlay">
@@ -255,6 +353,69 @@
                         </div>
                     </div>
                 </div>
+            
+
+                <!-- Children Yoga -->
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="children-yoga" style="animation-delay: 2.3s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-16.jpg', 'Kids Yoga')">
+                        <img src="../assets/images/Gallery-16.jpg" alt="Kids Yoga" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Kids Yoga</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="children-yoga" style="animation-delay: 2.4s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-18.jpg', 'Building flexibility')">
+                        <img src="../assets/images/Gallery-18.jpg" alt="Building flexibility" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Building flexibility</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="children-yoga" style="animation-delay: 2.5s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-19.jpg', 'The Bridge Pose')">
+                        <img src="../assets/images/Gallery-19.jpg" alt="The Bridge Pose" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>The Bridge Pose</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="children-yoga" style="animation-delay: 2.6s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-20.jpg', 'The Bhujangasana Yoga Pose')">
+                        <img src="../assets/images/Gallery-20.jpg" alt="The Bhujangasana Yoga Pose" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>The Bhujangasana Yoga Pose</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 gallery-item-wrapper fade-in-up" data-category="children-yoga" style="animation-delay: 2.7s">
+                    <div class="gallery-item" onclick="openGalleryModal('../assets/images/Gallery-22.jpg', 'Kids Group Yoga')">
+                        <img src="../assets/images/Gallery-22.jpg" alt="Kids Group Yoga" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="text-white">
+                                <h5>Kids Group Yoga</h5>
+                                <p class="mb-0"><i class="fas fa-search-plus me-2"></i>View Image</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <!-- No Results Message -->
